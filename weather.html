@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="weatherStyle.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="weatherEngine.js"></script>
+
+</head>
+
+<body>
+    <div id="forecast">
+        <h1>Weather at <span id="location"> </span></h1>
+        <div id="imgdiv">
+            <img id="img" src="" />
+        </div>
+        <p>It is currently <span id="temp"> </span>°F and <span id="desc"> </span></p>
+        <p>Wind: <span id="wind"></span></p>
+        
+        <h3> Want to check the weather elsewhere? Enter the city, state below: </h3>
+        <input id="enteredLoc" type="search" value="" style="background-color:rgb(230,210,0)" placeholder="City, State or Zip">
+        <button id="submitLoc" type="button" onclick="findWeather(document.getElementById('enteredLoc').value)">
+        	Go
+        </button>
+    </div>
+</body>
+
+</html>
